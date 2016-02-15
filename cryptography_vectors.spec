@@ -4,7 +4,7 @@
 #
 Name     : cryptography_vectors
 Version  : 1.1.2
-Release  : 20
+Release  : 21
 URL      : https://pypi.python.org/packages/source/c/cryptography-vectors/cryptography_vectors-1.1.2.tar.gz
 Source0  : https://pypi.python.org/packages/source/c/cryptography-vectors/cryptography_vectors-1.1.2.tar.gz
 Summary  : Test vectors for the cryptography package.

@@ -4,7 +4,7 @@
 #
 Name     : cryptography_vectors
 Version  : 1.5.2
-Release  : 29
+Release  : 30
 URL      : http://pypi.debian.net/cryptography_vectors/cryptography_vectors-1.5.2.tar.gz
 Source0  : http://pypi.debian.net/cryptography_vectors/cryptography_vectors-1.5.2.tar.gz
 Summary  : Test vectors for the cryptography package.

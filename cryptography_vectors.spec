@@ -6,7 +6,7 @@
 #
 Name     : cryptography_vectors
 Version  : 1.8.1
-Release  : 32
+Release  : 33
 URL      : http://pypi.debian.net/cryptography_vectors/cryptography_vectors-1.8.1.tar.gz
 Source0  : http://pypi.debian.net/cryptography_vectors/cryptography_vectors-1.8.1.tar.gz
 Source99 : http://pypi.debian.net/cryptography_vectors/cryptography_vectors-1.8.1.tar.gz.asc

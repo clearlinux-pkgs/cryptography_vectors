@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x235AE5F129F9ED98 (paul.l.kehrer@gmail.com)
 #
 Name     : cryptography_vectors
-Version  : 2.0.2
-Release  : 38
-URL      : http://pypi.debian.net/cryptography_vectors/cryptography_vectors-2.0.2.tar.gz
-Source0  : http://pypi.debian.net/cryptography_vectors/cryptography_vectors-2.0.2.tar.gz
-Source99 : http://pypi.debian.net/cryptography_vectors/cryptography_vectors-2.0.2.tar.gz.asc
+Version  : 2.0.3
+Release  : 39
+URL      : http://pypi.debian.net/cryptography_vectors/cryptography_vectors-2.0.3.tar.gz
+Source0  : http://pypi.debian.net/cryptography_vectors/cryptography_vectors-2.0.3.tar.gz
+Source99 : http://pypi.debian.net/cryptography_vectors/cryptography_vectors-2.0.3.tar.gz.asc
 Summary  : Test vectors for the cryptography package.
 Group    : Development/Tools
 License  : Apache-2.0 BSD-3-Clause
@@ -34,19 +34,19 @@ python components for the cryptography_vectors package.
 
 
 %prep
-%setup -q -n cryptography_vectors-2.0.2
+%setup -q -n cryptography_vectors-2.0.3
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1501153297
+export SOURCE_DATE_EPOCH=1501805722
 python2 setup.py build -b py2
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1501153297
+export SOURCE_DATE_EPOCH=1501805722
 rm -rf %{buildroot}
 python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
 python3 -tt setup.py build -b py3 install --root=%{buildroot} --force

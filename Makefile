@@ -1,5 +1,5 @@
 PKG_NAME := cryptography_vectors
-URL := http://pypi.debian.net/cryptography_vectors/cryptography_vectors-2.1.1.tar.gz
+URL := http://pypi.debian.net/cryptography_vectors/cryptography_vectors-2.1.2.tar.gz
 
 
 include ../common/Makefile.common

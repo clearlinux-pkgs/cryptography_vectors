@@ -6,7 +6,7 @@
 #
 Name     : cryptography_vectors
 Version  : 2.1.4
-Release  : 47
+Release  : 48
 URL      : http://pypi.debian.net/cryptography_vectors/cryptography_vectors-2.1.4.tar.gz
 Source0  : http://pypi.debian.net/cryptography_vectors/cryptography_vectors-2.1.4.tar.gz
 Source99 : http://pypi.debian.net/cryptography_vectors/cryptography_vectors-2.1.4.tar.gz.asc

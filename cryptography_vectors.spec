@@ -5,15 +5,14 @@
 # Source0 file verified with key 0x235AE5F129F9ED98 (paul.l.kehrer@gmail.com)
 #
 Name     : cryptography_vectors
-Version  : 2.1.4
-Release  : 49
-URL      : http://pypi.debian.net/cryptography_vectors/cryptography_vectors-2.1.4.tar.gz
-Source0  : http://pypi.debian.net/cryptography_vectors/cryptography_vectors-2.1.4.tar.gz
-Source99 : http://pypi.debian.net/cryptography_vectors/cryptography_vectors-2.1.4.tar.gz.asc
+Version  : 2.2.2
+Release  : 50
+URL      : http://pypi.debian.net/cryptography_vectors/cryptography_vectors-2.2.2.tar.gz
+Source0  : http://pypi.debian.net/cryptography_vectors/cryptography_vectors-2.2.2.tar.gz
+Source99 : http://pypi.debian.net/cryptography_vectors/cryptography_vectors-2.2.2.tar.gz.asc
 Summary  : Test vectors for the cryptography package.
 Group    : Development/Tools
 License  : Apache-2.0 BSD-3-Clause
-Requires: cryptography_vectors-legacypython
 Requires: cryptography_vectors-python3
 Requires: cryptography_vectors-python
 BuildRequires : pbr
@@ -26,19 +25,9 @@ BuildRequires : setuptools
 This zip file contains sample test vectors (values) for the following functions defined in
 NIST SP 800-38F:
 
-%package legacypython
-Summary: legacypython components for the cryptography_vectors package.
-Group: Default
-Requires: python-core
-
-%description legacypython
-legacypython components for the cryptography_vectors package.
-
-
 %package python
 Summary: python components for the cryptography_vectors package.
 Group: Default
-Requires: cryptography_vectors-legacypython
 Requires: cryptography_vectors-python3
 
 %description python
@@ -55,32 +44,25 @@ python3 components for the cryptography_vectors package.
 
 
 %prep
-%setup -q -n cryptography_vectors-2.1.4
+%setup -q -n cryptography_vectors-2.2.2
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1512156407
-python2 setup.py build -b py2
+export SOURCE_DATE_EPOCH=1522355407
 python3 setup.py build -b py3
 
 %install
-export SOURCE_DATE_EPOCH=1512156407
 rm -rf %{buildroot}
-python2 -tt setup.py build -b py2 install --root=%{buildroot} --force
-python3 -tt setup.py build -b py3 install --root=%{buildroot} --force
+python3 -tt setup.py build -b py3 install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
 
 %files
 %defattr(-,root,root,-)
-
-%files legacypython
-%defattr(-,root,root,-)
-/usr/lib/python2*/*
 
 %files python
 %defattr(-,root,root,-)

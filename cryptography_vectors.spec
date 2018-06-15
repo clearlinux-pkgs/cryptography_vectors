@@ -17,7 +17,7 @@ Requires: cryptography_vectors-python3
 Requires: cryptography_vectors-python
 BuildRequires : pbr
 BuildRequires : pip
-BuildRequires : python-dev
+
 BuildRequires : python3-dev
 BuildRequires : setuptools
 

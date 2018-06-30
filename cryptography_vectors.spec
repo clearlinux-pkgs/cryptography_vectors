@@ -6,7 +6,7 @@
 #
 Name     : cryptography_vectors
 Version  : 2.2.2
-Release  : 54
+Release  : 55
 URL      : http://pypi.debian.net/cryptography_vectors/cryptography_vectors-2.2.2.tar.gz
 Source0  : http://pypi.debian.net/cryptography_vectors/cryptography_vectors-2.2.2.tar.gz
 Source99 : http://pypi.debian.net/cryptography_vectors/cryptography_vectors-2.2.2.tar.gz.asc

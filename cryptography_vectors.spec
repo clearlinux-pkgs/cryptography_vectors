@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x235AE5F129F9ED98 (paul.l.kehrer@gmail.com)
 #
 Name     : cryptography_vectors
-Version  : 2.3
-Release  : 59
-URL      : http://pypi.debian.net/cryptography_vectors/cryptography_vectors-2.3.tar.gz
-Source0  : http://pypi.debian.net/cryptography_vectors/cryptography_vectors-2.3.tar.gz
-Source99 : http://pypi.debian.net/cryptography_vectors/cryptography_vectors-2.3.tar.gz.asc
+Version  : 2.3.1
+Release  : 60
+URL      : https://files.pythonhosted.org/packages/87/c6/d408df9c8cf39ed0b737358fe2b284f76aa82bb3c460a37ab067bdc1070c/cryptography_vectors-2.3.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/87/c6/d408df9c8cf39ed0b737358fe2b284f76aa82bb3c460a37ab067bdc1070c/cryptography_vectors-2.3.1.tar.gz
+Source99 : https://files.pythonhosted.org/packages/87/c6/d408df9c8cf39ed0b737358fe2b284f76aa82bb3c460a37ab067bdc1070c/cryptography_vectors-2.3.1.tar.gz.asc
 Summary  : Test vectors for the cryptography package.
 Group    : Development/Tools
 License  : Apache-2.0 BSD-3-Clause
@@ -17,10 +17,6 @@ Requires: cryptography_vectors-python3
 Requires: cryptography_vectors-license
 Requires: cryptography_vectors-python
 BuildRequires : buildreq-distutils3
-BuildRequires : pbr
-BuildRequires : pip
-BuildRequires : python3-dev
-BuildRequires : setuptools
 
 %description
 This zip file contains sample test vectors (values) for the following functions defined in
@@ -53,21 +49,21 @@ python3 components for the cryptography_vectors package.
 
 
 %prep
-%setup -q -n cryptography_vectors-2.3
+%setup -q -n cryptography_vectors-2.3.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1532005886
+export SOURCE_DATE_EPOCH=1534275207
 python3 setup.py build -b py3
 
 %install
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/doc/cryptography_vectors
-cp LICENSE.BSD %{buildroot}/usr/share/doc/cryptography_vectors/LICENSE.BSD
 cp LICENSE.APACHE %{buildroot}/usr/share/doc/cryptography_vectors/LICENSE.APACHE
+cp LICENSE.BSD %{buildroot}/usr/share/doc/cryptography_vectors/LICENSE.BSD
 python3 -tt setup.py build -b py3 install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :

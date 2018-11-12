@@ -5,22 +5,23 @@
 # Source0 file verified with key 0x235AE5F129F9ED98 (paul.l.kehrer@gmail.com)
 #
 Name     : cryptography_vectors
-Version  : 2.3.1
-Release  : 60
-URL      : https://files.pythonhosted.org/packages/87/c6/d408df9c8cf39ed0b737358fe2b284f76aa82bb3c460a37ab067bdc1070c/cryptography_vectors-2.3.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/87/c6/d408df9c8cf39ed0b737358fe2b284f76aa82bb3c460a37ab067bdc1070c/cryptography_vectors-2.3.1.tar.gz
-Source99 : https://files.pythonhosted.org/packages/87/c6/d408df9c8cf39ed0b737358fe2b284f76aa82bb3c460a37ab067bdc1070c/cryptography_vectors-2.3.1.tar.gz.asc
+Version  : 2.4.1
+Release  : 61
+URL      : https://files.pythonhosted.org/packages/43/bf/448f29ab3a4250bcff94a1f5eb143d87cf4c72799c947ac990cc631deec4/cryptography_vectors-2.4.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/43/bf/448f29ab3a4250bcff94a1f5eb143d87cf4c72799c947ac990cc631deec4/cryptography_vectors-2.4.1.tar.gz
+Source99 : https://files.pythonhosted.org/packages/43/bf/448f29ab3a4250bcff94a1f5eb143d87cf4c72799c947ac990cc631deec4/cryptography_vectors-2.4.1.tar.gz.asc
 Summary  : Test vectors for the cryptography package.
 Group    : Development/Tools
 License  : Apache-2.0 BSD-3-Clause
-Requires: cryptography_vectors-python3
-Requires: cryptography_vectors-license
-Requires: cryptography_vectors-python
+Requires: cryptography_vectors-license = %{version}-%{release}
+Requires: cryptography_vectors-python = %{version}-%{release}
+Requires: cryptography_vectors-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
 
 %description
-This zip file contains sample test vectors (values) for the following functions defined in
-NIST SP 800-38F:
+********************************************
+* Instructions for posting to LDAP Servers *
+********************************************
 
 %package license
 Summary: license components for the cryptography_vectors package.
@@ -33,7 +34,7 @@ license components for the cryptography_vectors package.
 %package python
 Summary: python components for the cryptography_vectors package.
 Group: Default
-Requires: cryptography_vectors-python3
+Requires: cryptography_vectors-python3 = %{version}-%{release}
 
 %description python
 python components for the cryptography_vectors package.
@@ -49,22 +50,22 @@ python3 components for the cryptography_vectors package.
 
 
 %prep
-%setup -q -n cryptography_vectors-2.3.1
+%setup -q -n cryptography_vectors-2.4.1
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1534275207
-python3 setup.py build -b py3
+export SOURCE_DATE_EPOCH=1542044499
+python3 setup.py build
 
 %install
 rm -rf %{buildroot}
-mkdir -p %{buildroot}/usr/share/doc/cryptography_vectors
-cp LICENSE.APACHE %{buildroot}/usr/share/doc/cryptography_vectors/LICENSE.APACHE
-cp LICENSE.BSD %{buildroot}/usr/share/doc/cryptography_vectors/LICENSE.BSD
-python3 -tt setup.py build -b py3 install --root=%{buildroot}
+mkdir -p %{buildroot}/usr/share/package-licenses/cryptography_vectors
+cp LICENSE.APACHE %{buildroot}/usr/share/package-licenses/cryptography_vectors/LICENSE.APACHE
+cp LICENSE.BSD %{buildroot}/usr/share/package-licenses/cryptography_vectors/LICENSE.BSD
+python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
 echo ----[ mark ]----
@@ -73,9 +74,9 @@ echo ----[ mark ]----
 %defattr(-,root,root,-)
 
 %files license
-%defattr(-,root,root,-)
-/usr/share/doc/cryptography_vectors/LICENSE.APACHE
-/usr/share/doc/cryptography_vectors/LICENSE.BSD
+%defattr(0644,root,root,0755)
+/usr/share/package-licenses/cryptography_vectors/LICENSE.APACHE
+/usr/share/package-licenses/cryptography_vectors/LICENSE.BSD
 
 %files python
 %defattr(-,root,root,-)

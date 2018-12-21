@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x235AE5F129F9ED98 (paul.l.kehrer@gmail.com)
 #
 Name     : cryptography_vectors
-Version  : 2.4.1
-Release  : 61
-URL      : https://files.pythonhosted.org/packages/43/bf/448f29ab3a4250bcff94a1f5eb143d87cf4c72799c947ac990cc631deec4/cryptography_vectors-2.4.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/43/bf/448f29ab3a4250bcff94a1f5eb143d87cf4c72799c947ac990cc631deec4/cryptography_vectors-2.4.1.tar.gz
-Source99 : https://files.pythonhosted.org/packages/43/bf/448f29ab3a4250bcff94a1f5eb143d87cf4c72799c947ac990cc631deec4/cryptography_vectors-2.4.1.tar.gz.asc
+Version  : 2.4.2
+Release  : 62
+URL      : https://files.pythonhosted.org/packages/dc/13/b502573fb34150a6cb3e146b1391f760df87d0b4fb9fd2ac23422829c8cd/cryptography_vectors-2.4.2.tar.gz
+Source0  : https://files.pythonhosted.org/packages/dc/13/b502573fb34150a6cb3e146b1391f760df87d0b4fb9fd2ac23422829c8cd/cryptography_vectors-2.4.2.tar.gz
+Source99 : https://files.pythonhosted.org/packages/dc/13/b502573fb34150a6cb3e146b1391f760df87d0b4fb9fd2ac23422829c8cd/cryptography_vectors-2.4.2.tar.gz.asc
 Summary  : Test vectors for the cryptography package.
 Group    : Development/Tools
 License  : Apache-2.0 BSD-3-Clause
@@ -50,14 +50,15 @@ python3 components for the cryptography_vectors package.
 
 
 %prep
-%setup -q -n cryptography_vectors-2.4.1
+%setup -q -n cryptography_vectors-2.4.2
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1542044499
+export SOURCE_DATE_EPOCH=1545402621
+export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
 %install

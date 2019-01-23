@@ -1,5 +1,5 @@
 PKG_NAME := cryptography_vectors
-URL = https://files.pythonhosted.org/packages/dc/13/b502573fb34150a6cb3e146b1391f760df87d0b4fb9fd2ac23422829c8cd/cryptography_vectors-2.4.2.tar.gz
+URL = https://files.pythonhosted.org/packages/d4/6d/d19e4ab409a934a358fae02807e7ebd25a42727637452b563ca09cff414e/cryptography_vectors-2.5.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common

@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x235AE5F129F9ED98 (paul.l.kehrer@gmail.com)
 #
 Name     : cryptography_vectors
-Version  : 2.4.2
-Release  : 63
-URL      : https://files.pythonhosted.org/packages/dc/13/b502573fb34150a6cb3e146b1391f760df87d0b4fb9fd2ac23422829c8cd/cryptography_vectors-2.4.2.tar.gz
-Source0  : https://files.pythonhosted.org/packages/dc/13/b502573fb34150a6cb3e146b1391f760df87d0b4fb9fd2ac23422829c8cd/cryptography_vectors-2.4.2.tar.gz
-Source99 : https://files.pythonhosted.org/packages/dc/13/b502573fb34150a6cb3e146b1391f760df87d0b4fb9fd2ac23422829c8cd/cryptography_vectors-2.4.2.tar.gz.asc
+Version  : 2.5
+Release  : 64
+URL      : https://files.pythonhosted.org/packages/d4/6d/d19e4ab409a934a358fae02807e7ebd25a42727637452b563ca09cff414e/cryptography_vectors-2.5.tar.gz
+Source0  : https://files.pythonhosted.org/packages/d4/6d/d19e4ab409a934a358fae02807e7ebd25a42727637452b563ca09cff414e/cryptography_vectors-2.5.tar.gz
+Source99 : https://files.pythonhosted.org/packages/d4/6d/d19e4ab409a934a358fae02807e7ebd25a42727637452b563ca09cff414e/cryptography_vectors-2.5.tar.gz.asc
 Summary  : Test vectors for the cryptography package.
 Group    : Development/Tools
 License  : Apache-2.0 BSD-3-Clause
@@ -19,9 +19,19 @@ Requires: cryptography_vectors-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
 
 %description
-********************************************
-* Instructions for posting to LDAP Servers *
-********************************************
+Example test files for PEM Serialization Backend tests
+Contains
+1. ec_private_key.pem - Contains an Elliptic Curve key generated using OpenSSL, from the curve secp256r1.
+2. ec_private_key_encrypted.pem - Contains the same Elliptic Curve key as ec_private_key.pem, except that
+it is encrypted with AES-256 with the password "123456".
+3. ec_public_key.pem - Contains the public key corresponding to ec_private_key.pem, generated using OpenSSL.
+4. rsa_private_key.pem - Contains an RSA 2048 bit key generated using OpenSSL, protected by the secret
+"123456" with DES3 encryption.
+5. rsa_public_key.pem - Contains an RSA 2048 bit public generated using OpenSSL from rsa_private_key.pem.
+6. dsaparam.pem - Contains 2048-bit DSA parameters generated using OpenSSL; contains no keys.
+7. dsa_private_key.pem - Contains a DSA 2048 bit key generated using OpenSSL from the parameters in
+dsaparam.pem, protected by the secret "123456" with DES3 encryption.
+8. dsa_public_key.pem - Contains a DSA 2048 bit key generated using OpenSSL from dsa_private_key.pem.
 
 %package license
 Summary: license components for the cryptography_vectors package.
@@ -50,14 +60,14 @@ python3 components for the cryptography_vectors package.
 
 
 %prep
-%setup -q -n cryptography_vectors-2.4.2
+%setup -q -n cryptography_vectors-2.5
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1545402621
+export SOURCE_DATE_EPOCH=1548205108
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 

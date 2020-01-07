@@ -6,7 +6,7 @@
 #
 Name     : cryptography_vectors
 Version  : 2.7
-Release  : 68
+Release  : 69
 URL      : https://files.pythonhosted.org/packages/d1/aa/c97197becda8c320744d76e5882b2ca54cfebc0388bb225c233555133b8d/cryptography_vectors-2.7.tar.gz
 Source0  : https://files.pythonhosted.org/packages/d1/aa/c97197becda8c320744d76e5882b2ca54cfebc0388bb225c233555133b8d/cryptography_vectors-2.7.tar.gz
 Source99 : https://files.pythonhosted.org/packages/d1/aa/c97197becda8c320744d76e5882b2ca54cfebc0388bb225c233555133b8d/cryptography_vectors-2.7.tar.gz.asc

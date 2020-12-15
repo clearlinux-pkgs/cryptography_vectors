@@ -6,7 +6,7 @@
 #
 Name     : cryptography_vectors
 Version  : 3.3.1
-Release  : 82
+Release  : 83
 URL      : https://files.pythonhosted.org/packages/44/b6/c6f102de1a8427d43a92973f9e768ba1134b8213ef2e1cd58bc6761f9441/cryptography_vectors-3.3.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/44/b6/c6f102de1a8427d43a92973f9e768ba1134b8213ef2e1cd58bc6761f9441/cryptography_vectors-3.3.1.tar.gz
 Source1  : https://files.pythonhosted.org/packages/44/b6/c6f102de1a8427d43a92973f9e768ba1134b8213ef2e1cd58bc6761f9441/cryptography_vectors-3.3.1.tar.gz.asc

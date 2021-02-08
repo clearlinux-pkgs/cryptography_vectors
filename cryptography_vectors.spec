@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x235AE5F129F9ED98 (paul.l.kehrer@gmail.com)
 #
 Name     : cryptography_vectors
-Version  : 3.3.1
-Release  : 83
-URL      : https://files.pythonhosted.org/packages/44/b6/c6f102de1a8427d43a92973f9e768ba1134b8213ef2e1cd58bc6761f9441/cryptography_vectors-3.3.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/44/b6/c6f102de1a8427d43a92973f9e768ba1134b8213ef2e1cd58bc6761f9441/cryptography_vectors-3.3.1.tar.gz
-Source1  : https://files.pythonhosted.org/packages/44/b6/c6f102de1a8427d43a92973f9e768ba1134b8213ef2e1cd58bc6761f9441/cryptography_vectors-3.3.1.tar.gz.asc
+Version  : 3.3.2
+Release  : 85
+URL      : https://files.pythonhosted.org/packages/b7/97/023ee031fd429e04d04970d442d961d219fb7c15a87aaae06477665bc9ac/cryptography_vectors-3.3.2.tar.gz
+Source0  : https://files.pythonhosted.org/packages/b7/97/023ee031fd429e04d04970d442d961d219fb7c15a87aaae06477665bc9ac/cryptography_vectors-3.3.2.tar.gz
+Source1  : https://files.pythonhosted.org/packages/b7/97/023ee031fd429e04d04970d442d961d219fb7c15a87aaae06477665bc9ac/cryptography_vectors-3.3.2.tar.gz.asc
 Summary  : Test vectors for the cryptography package.
 Group    : Development/Tools
 License  : Apache-2.0 BSD-3-Clause
@@ -51,15 +51,15 @@ python3 components for the cryptography_vectors package.
 
 
 %prep
-%setup -q -n cryptography_vectors-3.3.1
-cd %{_builddir}/cryptography_vectors-3.3.1
+%setup -q -n cryptography_vectors-3.3.2
+cd %{_builddir}/cryptography_vectors-3.3.2
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1607570212
+export SOURCE_DATE_EPOCH=1612826709
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
@@ -72,8 +72,8 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/cryptography_vectors
-cp %{_builddir}/cryptography_vectors-3.3.1/LICENSE.APACHE %{buildroot}/usr/share/package-licenses/cryptography_vectors/de33ead2bee64352544ce0aa9e410c0c44fdf7d9
-cp %{_builddir}/cryptography_vectors-3.3.1/LICENSE.BSD %{buildroot}/usr/share/package-licenses/cryptography_vectors/ea5b412c09f3b29ba1d81a61b878c5c16ffe69d8
+cp %{_builddir}/cryptography_vectors-3.3.2/LICENSE.APACHE %{buildroot}/usr/share/package-licenses/cryptography_vectors/de33ead2bee64352544ce0aa9e410c0c44fdf7d9
+cp %{_builddir}/cryptography_vectors-3.3.2/LICENSE.BSD %{buildroot}/usr/share/package-licenses/cryptography_vectors/ea5b412c09f3b29ba1d81a61b878c5c16ffe69d8
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :

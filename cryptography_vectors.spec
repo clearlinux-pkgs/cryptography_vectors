@@ -6,7 +6,7 @@
 #
 Name     : cryptography_vectors
 Version  : 35.0.0
-Release  : 97
+Release  : 98
 URL      : https://files.pythonhosted.org/packages/43/b0/76871f6d2672e5dbd2ec375b77d06abb1e4f840a92dfcd7a6bb567a8145d/cryptography_vectors-35.0.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/43/b0/76871f6d2672e5dbd2ec375b77d06abb1e4f840a92dfcd7a6bb567a8145d/cryptography_vectors-35.0.0.tar.gz
 Source1  : https://files.pythonhosted.org/packages/43/b0/76871f6d2672e5dbd2ec375b77d06abb1e4f840a92dfcd7a6bb567a8145d/cryptography_vectors-35.0.0.tar.gz.asc
@@ -59,7 +59,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1635716020
+export SOURCE_DATE_EPOCH=1635716124
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "

@@ -6,7 +6,7 @@
 #
 Name     : cryptography_vectors
 Version  : 36.0.0
-Release  : 99
+Release  : 100
 URL      : https://files.pythonhosted.org/packages/f8/a4/2612569e3465a5914c25afb63e55dcc2221978bb8e866fddd1e74ac33e50/cryptography_vectors-36.0.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/f8/a4/2612569e3465a5914c25afb63e55dcc2221978bb8e866fddd1e74ac33e50/cryptography_vectors-36.0.0.tar.gz
 Source1  : https://files.pythonhosted.org/packages/f8/a4/2612569e3465a5914c25afb63e55dcc2221978bb8e866fddd1e74ac33e50/cryptography_vectors-36.0.0.tar.gz.asc
